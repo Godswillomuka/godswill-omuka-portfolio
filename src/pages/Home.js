@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Instagram, Facebook, Mail, Download, ArrowDown, Code } from 'lucide-react';
 import '../styles/home.css';
@@ -8,13 +8,12 @@ const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
-  
-  const titles = [
+  const titles = useMemo(() => [
     'Fullstack Software Engineer',
     'React Developer',
     'Problem Solver',
     'Code Enthusiast'
-  ];
+  ], []);
 
   useEffect(() => {
     const currentTitle = titles[currentIndex];
