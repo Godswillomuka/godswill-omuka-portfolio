@@ -1,0 +1,224 @@
+.about-page {
+  min-height: 100vh;
+  padding: 8rem 0 4rem;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 26, 46, 0.9) 50%, rgba(22, 33, 62, 0.9) 100%);
+}
+
+.about-intro {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.about-intro::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(135deg, #64ffda, #00bcd4);
+  border-radius: 2px;
+}
+
+.about-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #64ffda;
+  position: relative;
+  display: inline-block;
+}
+
+.about-intro h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(135deg, #64ffda, #00bcd4);
+  border-radius: 1px;
+  transform: scaleX(0);
+  animation: expandLine 2s ease-out 0.5s forwards;
+}
+
+@keyframes expandLine {
+  to { transform: scaleX(1); }
+}
+
+.about-intro p {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.detail-cards {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.detail-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(100, 255, 218, 0.05);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.detail-card:hover {
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+}
+
+.card-icon {
+  color: #64ffda;
+  flex-shrink: 0;
+}
+
+.detail-card h3 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.detail-card p {
+  color: #94a3b8;
+  margin: 0;
+}
+
+.achievements h3 {
+  color: #64ffda;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.achievement-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(100, 255, 218, 0.05);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.achievement-item:hover {
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateX(10px);
+}
+
+.achievement-icon {
+  color: #64ffda;
+  flex-shrink: 0;
+}
+
+.achievement-item h4 {
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+}
+
+.achievement-item p {
+  color: #94a3b8;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.about-story h3 {
+  color: #64ffda;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.story-content {
+  margin-bottom: 2rem;
+}
+
+.story-content p {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.interests h4 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.interest-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  transition: all 0.3s ease;
+}
+
+.interest-tag:hover {
+  background: rgba(100, 255, 218, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-intro {
+    margin-bottom: 2rem;
+  }
+  
+  .detail-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .achievement-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .interest-tags {
+    justify-content: center;
+  }
+}

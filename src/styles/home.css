@@ -1,0 +1,375 @@
+.home-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.home-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 2;
+  height: 100%;
+  max-height: 90vh;
+}
+
+.home-left {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.welcome-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(100, 255, 218, 0.1);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  color: #64ffda;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+}
+
+.home-left h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.typing-container {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.typing-text {
+  border-right: 2px solid #64ffda;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { border-color: #64ffda; }
+  51%, 100% { border-color: transparent; }
+}
+
+.home-description {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(100, 255, 218, 0.1);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  border-radius: 50%;
+  color: #64ffda;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: rgba(100, 255, 218, 0.2);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(100, 255, 218, 0.3);
+}
+
+.home-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.profile-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: center;
+  height: 100%;
+}
+
+.profile-image-container {
+  position: relative;
+  width: clamp(280px, 30vw, 320px);
+  height: clamp(280px, 30vw, 320px);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #64ffda, #00bcd4);
+  padding: 4px;
+  position: relative;
+  overflow: hidden;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.7);
+  }
+  50% { 
+    box-shadow: 0 0 0 20px rgba(100, 255, 218, 0);
+  }
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  filter: sepia(20%) saturate(120%) hue-rotate(180deg) brightness(1.1) contrast(1.1);
+}
+
+.profile-image-container:hover .profile-image img {
+  transform: scale(1.05);
+  filter: sepia(30%) saturate(140%) hue-rotate(180deg) brightness(1.2) contrast(1.2);
+}
+
+.image-glow {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #64ffda, #00bcd4);
+  opacity: 0.3;
+  filter: blur(20px);
+  z-index: -1;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.3;
+    filter: blur(20px);
+  }
+  to {
+    opacity: 0.6;
+    filter: blur(30px);
+  }
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 350px;
+}
+
+.stat {
+  text-align: center;
+  background: rgba(100, 255, 218, 0.05);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 15px;
+  padding: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #64ffda;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.scroll-indicator {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .home-page {
+    height: auto;
+    min-height: 100vh;
+    padding: 8rem 2rem 4rem;
+  }
+  
+  .home-content {
+    height: auto;
+    max-height: none;
+  }
+  
+  .home-left {
+    height: auto;
+  }
+  
+  .home-right {
+    height: auto;
+  }
+  
+  .profile-section {
+    height: auto;
+  }
+  
+  .scroll-indicator {
+    display: block;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #64ffda;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    height: auto;
+    min-height: 100vh;
+    padding: 8rem 1rem 4rem;
+  }
+  
+  .home-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+    height: auto;
+    max-height: none;
+  }
+  
+  .home-right {
+    order: -1;
+    height: auto;
+  }
+  
+  .home-left {
+    order: 1;
+    height: auto;
+  }
+  
+  .home-left {
+    text-align: center;
+  }
+  
+  .home-left h1 {
+    font-size: 2.5rem;
+  }
+  
+  .typing-container {
+    justify-content: center;
+    height: 3rem;
+  }
+  
+  .home-buttons {
+    justify-content: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .profile-image-container {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .profile-section {
+    height: auto;
+    gap: 2rem;
+  }
+  
+  .profile-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 300px;
+  }
+  
+  .stat {
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+  }
+  
+  .social-link {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-left h1 {
+    font-size: 2rem;
+  }
+  
+  .profile-image-container {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .home-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .home-description {
+    font-size: 0.95rem;
+  }
+  
+  .welcome-badge {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

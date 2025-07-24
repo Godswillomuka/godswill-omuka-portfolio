@@ -1,0 +1,88 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  background: rgba(10, 10, 10, 0.95);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  backdrop-filter: blur(20px);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #64ffda;
+  background: rgba(100, 255, 218, 0.1);
+}
+
+.success-icon {
+  color: #64ffda;
+  margin-bottom: 1.5rem;
+}
+
+.modal-content h2 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.modal-content p {
+  color: #94a3b8;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.modal-buttons .btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .modal-buttons {
+    flex-direction: column;
+  }
+  
+  .modal-buttons .btn {
+    width: 100%;
+  }
+}
