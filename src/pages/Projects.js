@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Folder, Star, Eye, Globe } from 'lucide-react';
+import { Github, Folder, Star, Eye, Globe } from 'lucide-react';
 import '../styles/projects.css';
 
 const Projects = () => {
