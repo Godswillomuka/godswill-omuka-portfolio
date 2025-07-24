@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+// import Header from './components/Header';
 import BackgroundMotion from './components/BackgroundMotion';
-import Home from './pages/Home';
-import About from './pages/About';
-import Skills from './pages/Skills';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+// import Home from './pages/Home';
+// import About from './pages/About';
+// import Skills from './pages/Skills';
+// import Projects from './pages/Projects';
+// import Contact from './pages/Contact';
 import './styles/global.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     <Router>
       <div className="app">
         <BackgroundMotion />
-        <Header />
+        {/* <Header />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -23,7 +23,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </main>
+        </main> */}
       </div>
     </Router>
   );
