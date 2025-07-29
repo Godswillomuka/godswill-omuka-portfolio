@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram, Facebook, Youtube , MessageCircle } from 'lucide-react';
+import {
+  Mail, Phone, MapPin, Send,
+  Github, Linkedin, Instagram, Facebook, Youtube, MessageCircle
+} from 'lucide-react';
 import { FaTiktok } from 'react-icons/fa';
 import ConfirmationModal from '../components/confirmationModal';
 import '../styles/contact.css';
@@ -23,16 +26,14 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-      // Create FormData for Netlify form submission
       const formDataToSend = new FormData();
       formDataToSend.append('form-name', 'contact');
       formDataToSend.append('name', formData.name);
       formDataToSend.append('email', formData.email);
       formDataToSend.append('message', formData.message);
 
-      // Submit to Netlify
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -43,24 +44,20 @@ const Contact = () => {
         setShowConfirmation(true);
         setFormData({ name: '', email: '', message: '' });
       } else {
-        // Fallback to mailto if Netlify form fails
         const subject = encodeURIComponent(`Portfolio Contact: ${formData.name}`);
         const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-        const mailtoLink = `mailto:omukagodswil@gmail.com?subject=${subject}&body=${body}`;
-        window.open(mailtoLink, '_blank');
+        window.open(`mailto:omukagodswil@gmail.com?subject=${subject}&body=${body}`, '_blank');
         setShowConfirmation(true);
         setFormData({ name: '', email: '', message: '' });
       }
     } catch (error) {
-      // Fallback to mailto on error
       const subject = encodeURIComponent(`Portfolio Contact: ${formData.name}`);
       const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-      const mailtoLink = `mailto:omukagodswil@gmail.com?subject=${subject}&body=${body}`;
-      window.open(mailtoLink, '_blank');
+      window.open(`mailto:omukagodswil@gmail.com?subject=${subject}&body=${body}`, '_blank');
       setShowConfirmation(true);
       setFormData({ name: '', email: '', message: '' });
     }
-    
+
     setIsSubmitting(false);
   };
 
@@ -80,24 +77,24 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Location',
-      content: 'Nairobi, Kenya',
-      link: 'https://maps.google.com',
+      content: 'Dynamics Freelancehub, 5th Floor, New Al Noor Building, Nairobi',
+      link: 'https://www.google.com/maps/dir/?api=1&destination=Dynamics+Freelancehub,+New+Al+Noor+Building,+Kenneth+Matiba+Rd,+Nairobi&travelmode=driving',
     },
   ];
 
   const socialLinks = [
-      { icon: Github, href: 'https://github.com/Godswillomuka', label: 'GitHub' },
-      { icon: Linkedin, href: '/', label: 'LinkedIn' },
-      { icon: Instagram, href: 'https://www.instagram.com/_kidzilla/', label: 'Instagram' },
-      { icon: Facebook, href: 'https://www.facebook.com/dripkid.zilla/', label: 'Facebook' },
-      { icon: Youtube, href: 'https://www.youtube.com/@dripkid_zilla', label: 'YouTube' },
-      { icon: FaTiktok, href: 'https://www.tiktok.com/@_kidzilla', label: 'TikTok' },
-    ];
+    { icon: Github, href: 'https://github.com/Godswillomuka', label: 'GitHub' },
+    { icon: Linkedin, href: '/', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://www.instagram.com/_kidzilla/', label: 'Instagram' },
+    { icon: Facebook, href: 'https://www.facebook.com/dripkid.zilla/', label: 'Facebook' },
+    { icon: Youtube, href: 'https://www.youtube.com/@dripkid_zilla', label: 'YouTube' },
+    { icon: FaTiktok, href: 'https://www.tiktok.com/@_kidzilla', label: 'TikTok' },
+  ];
 
   return (
     <section className="contact-page">
       <div className="container">
-        <motion.h1 
+        <motion.h1
           className="page-title"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -106,7 +103,7 @@ const Contact = () => {
           Get In <span className="gradient-text">Touch</span>
         </motion.h1>
 
-        <motion.p 
+        <motion.p
           className="contact-intro"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -116,14 +113,14 @@ const Contact = () => {
         </motion.p>
 
         <div className="contact-content">
-          <motion.div 
+          <motion.div
             className="contact-info"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h3>Let's Connect</h3>
-            
+
             <div className="contact-methods">
               {contactInfo.map((info, index) => (
                 <motion.a
@@ -169,8 +166,8 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          <motion.form 
-            className="contact-form" 
+          <motion.form
+            className="contact-form"
             onSubmit={handleSubmit}
             name="contact"
             method="POST"
@@ -182,12 +179,12 @@ const Contact = () => {
           >
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
-            
+
             <h3>
               <MessageCircle size={24} />
               Send Message
             </h3>
-            
+
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="name">Name</label>
@@ -248,11 +245,11 @@ const Contact = () => {
             </motion.button>
           </motion.form>
         </div>
-      </div>
 
-      {showConfirmation && (
-        <ConfirmationModal onClose={() => setShowConfirmation(false)} />
-      )}
+        {showConfirmation && (
+          <ConfirmationModal onClose={() => setShowConfirmation(false)} />
+        )}
+      </div>
     </section>
   );
 };
