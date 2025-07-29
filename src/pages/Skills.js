@@ -12,7 +12,6 @@ import {
   Terminal,
   Users,
   MessageCircle,
-  Target,
   Clock,
   Lightbulb,
   Server,
