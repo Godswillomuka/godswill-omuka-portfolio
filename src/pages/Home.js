@@ -7,8 +7,7 @@ import {
   Facebook, 
   Mail, 
   Download, 
-  ArrowDown, 
-  Code, 
+  ArrowDown,  
   Youtube 
 } from 'lucide-react';
 import { FaTiktok } from 'react-icons/fa'; // TikTok icon
@@ -68,15 +67,7 @@ const Home = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
           >
-            <motion.div
-              className="welcome-badge"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <Code size={16} />
-              <span>Welcome to my portfolio</span>
-            </motion.div>
+            
 
             <motion.h1
               initial={{ opacity: 0, y: 50 }}

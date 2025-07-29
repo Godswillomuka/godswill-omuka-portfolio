@@ -103,14 +103,27 @@ body {
 }
 
 .logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.5rem;
+  background: rgba(100, 255, 218, 0.1);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-decoration: none;
+  
   transition: transform 0.3s ease;
   color: #64ffda;
+  width: fit-content;
+}
+
+
+.logo a:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
 }
 
 .logo:hover {

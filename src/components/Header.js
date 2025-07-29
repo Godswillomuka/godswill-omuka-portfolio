@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Code } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 function Header() {
@@ -44,10 +44,13 @@ function Header() {
             className="logo"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2}}
           >
             <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.5rem", textDecoration: "none" }}>
-              
-              <span style={{ color: "#64ffda" }}>Portfolio .</span>
+            <Code size={24} color="#64ffda"/>  
+            <span style={{ color: "#64ffda" }}>Welcome to my portfolio</span>
             </Link>
           </motion.div>
 
@@ -69,6 +72,7 @@ function Header() {
                     boxShadow: isActiveLink(link.href)
                       ? "0 0 20px rgba(100, 255, 218, 0.3)"
                       : "none",
+                      borderRadius: "50px",
                   }}
                 >
                   {link.name}
