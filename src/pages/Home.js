@@ -1,6 +1,17 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Instagram, Facebook, Mail, Download, ArrowDown, Code } from 'lucide-react';
+import { 
+  Github, 
+  Linkedin, 
+  Instagram, 
+  Facebook, 
+  Mail, 
+  Download, 
+  ArrowDown, 
+  Code, 
+  Youtube 
+} from 'lucide-react';
+import { FaTiktok } from 'react-icons/fa'; // TikTok icon
 import '../styles/home.css';
 
 const Home = () => {
@@ -37,12 +48,14 @@ const Home = () => {
     return () => clearTimeout(timeout);
   }, [typedText, currentIndex, isDeleting, titles]);
 
+  // ✅ Updated social links: Mail removed, TikTok & YouTube added, Facebook kept
   const socialLinks = [
     { icon: Github, href: 'https://github.com/Godswillomuka', label: 'GitHub' },
     { icon: Linkedin, href: 'https://linkedin.com/in/godswill-omuka', label: 'LinkedIn' },
     { icon: Instagram, href: 'https://instagram.com/yourusername', label: 'Instagram' },
     { icon: Facebook, href: 'https://facebook.com/yourusername', label: 'Facebook' },
-    { icon: Mail, href: 'mail to: omukagodswil@gmail.com', label: 'Mail' },
+    { icon: Youtube, href: 'https://youtube.com/@yourchannel', label: 'YouTube' },
+    { icon: FaTiktok, href: 'https://tiktok.com/@yourusername', label: 'TikTok' },
   ];
 
   return (
@@ -102,6 +115,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
+              {/* ✅ "Let's Talk" button keeps the Mail icon */}
               <motion.a
                 href="/contact"
                 className="btn btn-primary"
@@ -125,6 +139,7 @@ const Home = () => {
               </motion.a>
             </motion.div>
 
+            {/* ✅ Social Links: Mail removed, TikTok & YouTube added, Facebook included */}
             <motion.div 
               className="social-links"
               initial={{ opacity: 0, y: 30 }}
@@ -178,11 +193,11 @@ const Home = () => {
                 transition={{ duration: 0.8, delay: 1.5 }}
               >
                 <div className="stat">
-                  <span className="stat-number">6</span>
-                  <span className="stat-label">Months Training</span>
+                  <span className="stat-number">4\5</span>
+                  <span className="stat-label">Ratings</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-number">3+</span>
+                  <span className="stat-number">20+</span>
                   <span className="stat-label">Projects Done</span>
                 </div>
                 <div className="stat">
@@ -190,7 +205,7 @@ const Home = () => {
                   <span className="stat-label">Dedication</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-number">1</span>
+                  <span className="stat-number">1+</span>
                   <span className="stat-label">Year Experience</span>
                 </div>
               </motion.div>
