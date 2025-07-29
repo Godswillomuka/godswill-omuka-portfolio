@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram, Facebook, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram, Facebook, Youtube , MessageCircle } from 'lucide-react';
+import { FaTiktok } from 'react-icons/fa';
 import ConfirmationModal from '../components/confirmationModal';
 import '../styles/contact.css';
 
@@ -85,11 +86,13 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/Godswillomuka', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/godswill-omuka', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com/yourusername', label: 'Instagram' },
-    { icon: Facebook, href: 'https://facebook.com/yourusername', label: 'Facebook' },
-  ];
+      { icon: Github, href: 'https://github.com/Godswillomuka', label: 'GitHub' },
+      { icon: Linkedin, href: '/', label: 'LinkedIn' },
+      { icon: Instagram, href: 'https://www.instagram.com/_kidzilla/', label: 'Instagram' },
+      { icon: Facebook, href: 'https://www.facebook.com/dripkid.zilla/', label: 'Facebook' },
+      { icon: Youtube, href: 'https://www.youtube.com/@dripkid_zilla', label: 'YouTube' },
+      { icon: FaTiktok, href: 'https://www.tiktok.com/@_kidzilla', label: 'TikTok' },
+    ];
 
   return (
     <section className="contact-page">

@@ -50,7 +50,7 @@ const About = () => {
                 <div className="detail-card">
                   <Calendar className="card-icon" />
                   <div>
-                    <h3>Experience</h3>
+                    <h3>Experience</h3><meta name="theme-color" content="#000000" />
                     <p>6 Months Intensive Training at Moringa School</p>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ const About = () => {
                 <p>
                   My journey into software development began with curiosity and has evolved into a passion 
                   focused on innovation and problem-solving. Currently completing an intensive 6-month 
-                  Software Engineering program at Moringa School, graduating July 2025.
+                  Software Engineering program at Moringa School, graduated on July 2025.
                 </p>
                 <p>
                   I specialize in fullstack web development with practical application of modern frameworks 

@@ -98,7 +98,7 @@ const Home = () => {
             >
               A passionate and results-oriented Fullstack Developer with a robust foundation in modern web
               technologies. Proficient in building dynamic and responsive applications using React, HTML, CSS,
-              Python, Flask, and SQLite3. Let's create something amazing together! 🚀
+              Python, Flask, and SQLite3. Let's create something amazing together! 
             </motion.p>
 
             <motion.div 
