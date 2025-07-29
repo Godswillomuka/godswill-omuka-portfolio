@@ -51,11 +51,11 @@ const Home = () => {
   // ✅ Updated social links: Mail removed, TikTok & YouTube added, Facebook kept
   const socialLinks = [
     { icon: Github, href: 'https://github.com/Godswillomuka', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/godswill-omuka', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com/yourusername', label: 'Instagram' },
-    { icon: Facebook, href: 'https://facebook.com/yourusername', label: 'Facebook' },
-    { icon: Youtube, href: 'https://youtube.com/@yourchannel', label: 'YouTube' },
-    { icon: FaTiktok, href: 'https://tiktok.com/@yourusername', label: 'TikTok' },
+    { icon: Linkedin, href: '/', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://www.instagram.com/_kidzilla/', label: 'Instagram' },
+    { icon: Facebook, href: 'https://www.facebook.com/dripkid.zilla/', label: 'Facebook' },
+    { icon: Youtube, href: 'https://www.youtube.com/@dripkid_zilla', label: 'YouTube' },
+    { icon: FaTiktok, href: 'https://www.tiktok.com/@_kidzilla', label: 'TikTok' },
   ];
 
   return (
