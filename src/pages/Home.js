@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
+
 import { 
   Github, 
   Linkedin, 
@@ -178,28 +179,26 @@ const Home = () => {
               </motion.div>
 
               <motion.div
-                className="profile-stats"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.5 }}
-              >
-                <div className="stat">
-                  <span className="stat-number">4\5</span>
-                  <span className="stat-label">Ratings</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-number">20+</span>
-                  <span className="stat-label">Projects Done</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-number">100%</span>
-                  <span className="stat-label">Dedication</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-number">1+</span>
-                  <span className="stat-label">Year Experience</span>
-                </div>
-              </motion.div>
+  className="profile-stats"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 1.5 }}
+>
+  <div className="stat">
+    <span className="stat-number">4.5/5</span>
+    <span className="stat-label">User Rating</span>
+  </div>
+  <div className="stat">
+    <span className="stat-number">20+</span>
+    <span className="stat-label">Projects Built</span>
+  </div>
+  <div className="stat">
+    <span className="stat-number">100%</span>
+    <span className="stat-label">My Dedication</span>
+  </div>
+  
+</motion.div>
+
             </div>
           </motion.div>
         </div>
