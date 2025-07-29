@@ -47,7 +47,7 @@ function Header() {
           >
             <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.5rem", textDecoration: "none" }}>
               
-              <span style={{ color: "#64ffda" }}>God'swill .</span>
+              <span style={{ color: "#64ffda" }}>Portfolio .</span>
             </Link>
           </motion.div>
 

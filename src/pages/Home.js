@@ -42,7 +42,7 @@ const Home = () => {
     { icon: Linkedin, href: 'https://linkedin.com/in/godswill-omuka', label: 'LinkedIn' },
     { icon: Instagram, href: 'https://instagram.com/yourusername', label: 'Instagram' },
     { icon: Facebook, href: 'https://facebook.com/yourusername', label: 'Facebook' },
-    { icon: Mail, href: 'mailto:omukagodswil@gmail.com', label: 'Email' },
+    { icon: Mail, href: 'mail to: omukagodswil@gmail.com', label: 'Mail' },
   ];
 
   return (
