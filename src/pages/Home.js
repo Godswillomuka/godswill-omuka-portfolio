@@ -107,7 +107,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              {/* ✅ "Let's Talk" button keeps the Mail icon */}
+              
               <motion.a
                 href="/contact"
                 className="btn btn-primary"
