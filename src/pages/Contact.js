@@ -84,7 +84,7 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: Github, href: 'https://github.com/Godswillomuka', label: 'GitHub' },
-    { icon: Linkedin, href: '/', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/god-swil-omuka-275708381/', label: 'LinkedIn' },
     { icon: Instagram, href: 'https://www.instagram.com/_kidzilla/', label: 'Instagram' },
     { icon: Facebook, href: 'https://www.facebook.com/dripkid.zilla/', label: 'Facebook' },
     { icon: Youtube, href: 'https://www.youtube.com/@dripkid_zilla', label: 'YouTube' },
