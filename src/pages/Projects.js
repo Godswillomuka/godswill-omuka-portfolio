@@ -26,6 +26,15 @@ const Projects = () => {
       featured: true
     },
     {
+      title: 'Portfolio Website',
+      description: 'Personal portfolio website with modern design, smooth animations, contact forms, and responsive layout.',
+      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=400',
+      tech: ['React', 'Framer Motion', 'CSS3', 'Vite'],
+      github: 'https://github.com/Godswillomuka/portfolio',
+      demo: 'https://godswill-omuka-portfolio.vercel.app/',
+      stats: { stars: 25, views: 1200 }
+    },
+    {
       title: 'Quick Trade Hub - Crypto CLI',
       description: 'A command-line interface crypto trading simulator with virtual wallet management, buy/sell orders, and transaction logging.',
       image: 'https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=400',
@@ -79,15 +88,7 @@ const Projects = () => {
       demo: 'https://recipe-finder-mobile.vercel.app',
       stats: { stars: 11, views: 380 }
     },
-    {
-      title: 'Portfolio Website',
-      description: 'Personal portfolio website with modern design, smooth animations, contact forms, and responsive layout.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=400',
-      tech: ['React', 'Framer Motion', 'CSS3', 'Vite'],
-      github: 'https://github.com/Godswillomuka/portfolio',
-      demo: 'https://godswill-portfolio.vercel.app',
-      stats: { stars: 25, views: 1200 }
-    }
+    
   ];
 
   return (
