@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
+import profileImg from '../assets/profile.png';
+
 
 import { 
   Github, 
@@ -131,7 +133,7 @@ const Home = () => {
               </motion.a>
             </motion.div>
 
-            {/* ✅ Social Links: Mail removed, TikTok & YouTube added, Facebook included */}
+            
             <motion.div 
               className="social-links"
               initial={{ opacity: 0, y: 30 }}
@@ -171,7 +173,7 @@ const Home = () => {
               >
                 <div className="profile-image">
                   <img 
-                    src="https://i.pinimg.com/736x/0f/8e/26/0f8e26a07d060f9347492a076a1c7021.jpg" 
+                    src={profileImg} 
                     alt="God'swill Omuka - Software Engineer"
                   />
                   <div className="image-glow"></div>
