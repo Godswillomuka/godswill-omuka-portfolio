@@ -56,7 +56,7 @@ body {
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  /* background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); */
   border-radius: 2px;
 }
 
