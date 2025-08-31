@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import profileImg from '../assets/profile.png';
-
-
 import { 
   Github, 
   Linkedin, 
@@ -61,6 +59,7 @@ const Home = () => {
   ];
 
   return (
+    <>
     <section className="home-page">
       <div className="container">
         <div className="home-content">
@@ -219,6 +218,8 @@ const Home = () => {
         </motion.div>
       </div>
     </section>
+    
+    </>
   );
 };
 
