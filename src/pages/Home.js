@@ -100,7 +100,7 @@ const Home = () => {
             >
               A passionate and results-oriented Fullstack Developer with a robust foundation in modern web
               technologies. Proficient in building dynamic and responsive applications using React, HTML, CSS,
-              Python, Flask, and SQLite3. Let's create something amazing together! 
+              Python, Flask, SQLite3 and PostgreSQL. Let's create something amazing together! 
             </motion.p>
 
             <motion.div 
@@ -188,15 +188,15 @@ const Home = () => {
 >
   <div className="stat">
     <span className="stat-number">4.5/5</span>
-    <span className="stat-label">User Rating</span>
+    <span className="stat-label">Rating</span>
   </div>
   <div className="stat">
-    <span className="stat-number">20+</span>
-    <span className="stat-label">Projects Built</span>
+    <span className="stat-number">5+</span>
+    <span className="stat-label">Projects</span>
   </div>
   <div className="stat">
     <span className="stat-number">100%</span>
-    <span className="stat-label">My Dedication</span>
+    <span className="stat-label">Dedication</span>
   </div>
   
 </motion.div>
