@@ -34,7 +34,7 @@ const About = () => {
               A passionate and results-oriented Fullstack Developer with a robust foundation in modern web
               technologies, acquired through an intensive 6-month Software Engineering program at Moringa
               School. Proficient in building dynamic and responsive applications using React, HTML, CSS,
-              Python, Flask, and SQLite3. Eager to apply strong problem-solving skills and practical experience
+              Python, Flask, SQLite3 and PostgreSQL. Eager to apply strong problem-solving skills and practical experience
               to contribute to innovative projects and grow within a challenging software development environment.
             </p>
           </motion.div>
