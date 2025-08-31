@@ -1,9 +1,46 @@
-.about-page {
-  min-height: 100vh;
-  padding: 8rem 0 4rem;
-  background: linear-gradient(135deg, rgba(10, 10, 10, 0.9) 0%, rgba(26, 26, 46, 0.9) 50%, rgba(22, 33, 62, 0.9) 100%);
+/* -------------------------
+   VARIABLES
+-------------------------- */
+:root {
+  --primary-color: #64ffda;
+  --secondary-color: #00bcd4;
+  --text-color: #ffffff;
+  --subtext-color: rgba(148, 163, 184, 0.9);
+  --bg-gradient-start: rgba(10, 10, 10, 0.9);
+  --bg-gradient-middle: rgba(26, 26, 46, 0.9);
+  --bg-gradient-end: rgba(22, 33, 62, 0.9);
+  --card-bg: rgba(100, 255, 218, 0.05);
+  --card-border: rgba(100, 255, 218, 0.1);
+  --card-hover-bg: rgba(100, 255, 218, 0.1);
+  --transition-speed: 0.3s;
+  --font-family: 'Inter', sans-serif;
 }
 
+/* -------------------------
+   BASE STYLES
+-------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background: #0a0a0a;
+  color: var(--text-color);
+}
+
+.about-page {
+  min-height: 100vh;
+  padding: 8rem 1rem 4rem;
+  background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-middle) 50%, var(--bg-gradient-end) 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* -------------------------
+   INTRO SECTION
+-------------------------- */
 .about-intro {
   max-width: 1200px;
   margin: 0 auto 4rem;
@@ -19,14 +56,14 @@
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(135deg, #64ffda, #00bcd4);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   border-radius: 2px;
 }
 
 .about-intro h2 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   margin-bottom: 1.5rem;
-  color: #64ffda;
+  color: var(--primary-color);
   position: relative;
   display: inline-block;
 }
@@ -38,7 +75,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(135deg, #64ffda, #00bcd4);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   border-radius: 1px;
   transform: scaleX(0);
   animation: expandLine 2s ease-out 0.5s forwards;
@@ -49,18 +86,22 @@
 }
 
 .about-intro p {
-  font-size: 1.1rem;
-  color: #94a3b8;
-  line-height: 1.8;
+  font-size: 1.125rem;
+  color: var(--subtext-color);
+  line-height: 1.9;
+  letter-spacing: 0.5px;
   max-width: 800px;
   margin: 0 auto;
+  transition: color 0.3s ease;
 }
 
-.about-content {
-  max-width: 1200px;
-  margin: 0 auto;
+.about-intro p:hover {
+  color: var(--text-color);
 }
 
+/* -------------------------
+   GRID LAYOUT
+-------------------------- */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -68,6 +109,14 @@
   margin-top: 3rem;
 }
 
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* -------------------------
+   DETAIL CARDS
+-------------------------- */
 .detail-cards {
   display: grid;
   gap: 1.5rem;
@@ -78,37 +127,42 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: rgba(100, 255, 218, 0.05);
-  border: 1px solid rgba(100, 255, 218, 0.1);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 15px;
   padding: 1.5rem;
-  transition: all 0.3s ease;
+  transition: all var(--transition-speed) ease;
 }
 
 .detail-card:hover {
-  background: rgba(100, 255, 218, 0.1);
+  background: var(--card-hover-bg);
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
 }
 
 .card-icon {
-  color: #64ffda;
+  color: var(--primary-color);
   flex-shrink: 0;
 }
 
 .detail-card h3 {
-  color: #ffffff;
+  color: var(--text-color);
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 
 .detail-card p {
-  color: #94a3b8;
+  color: var(--subtext-color);
   margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
 }
 
+/* -------------------------
+   ACHIEVEMENTS
+-------------------------- */
 .achievements h3 {
-  color: #64ffda;
+  color: var(--primary-color);
   margin-bottom: 1.5rem;
   font-size: 1.3rem;
 }
@@ -122,53 +176,63 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: rgba(100, 255, 218, 0.05);
-  border: 1px solid rgba(100, 255, 218, 0.1);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 10px;
   padding: 1rem;
-  transition: all 0.3s ease;
+  transition: all var(--transition-speed) ease;
 }
 
 .achievement-item:hover {
-  background: rgba(100, 255, 218, 0.1);
+  background: var(--card-hover-bg);
   transform: translateX(10px);
 }
 
 .achievement-icon {
-  color: #64ffda;
+  color: var(--primary-color);
   flex-shrink: 0;
 }
 
 .achievement-item h4 {
-  color: #ffffff;
+  color: var(--text-color);
   margin-bottom: 0.2rem;
   font-size: 1rem;
 }
 
 .achievement-item p {
-  color: #94a3b8;
+  color: var(--subtext-color);
   margin: 0;
   font-size: 0.9rem;
+  line-height: 1.6;
 }
 
+/* -------------------------
+   STORY SECTION
+-------------------------- */
 .about-story h3 {
-  color: #64ffda;
+  color: var(--primary-color);
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
 }
 
-.story-content {
-  margin-bottom: 2rem;
-}
-
 .story-content p {
-  color: #94a3b8;
+  color: var(--subtext-color);
   margin-bottom: 1.5rem;
-  line-height: 1.7;
+  line-height: 1.9;
+  font-size: 1.125rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
 }
 
+.story-content p:hover {
+  color: var(--text-color);
+}
+
+/* -------------------------
+   INTEREST TAGS
+-------------------------- */
 .interests h4 {
-  color: #ffffff;
+  color: var(--primary-color);
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
@@ -183,13 +247,13 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(100, 255, 218, 0.1);
-  color: #64ffda;
+  background: var(--card-hover-bg);
+  color: var(--primary-color);
   padding: 0.5rem 1rem;
   border-radius: 25px;
   font-size: 0.9rem;
   border: 1px solid rgba(100, 255, 218, 0.2);
-  transition: all 0.3s ease;
+  transition: all var(--transition-speed) ease;
 }
 
 .interest-tag:hover {
@@ -197,28 +261,38 @@
   transform: translateY(-2px);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* -------------------------
+   RESPONSIVE DESIGN
+-------------------------- */
+@media (max-width: 1024px) {
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
   }
-  
+}
+
+@media (max-width: 768px) {
   .about-intro {
     margin-bottom: 2rem;
   }
-  
-  .detail-card {
-    flex-direction: column;
-    text-align: center;
-  }
-  
+
+  .detail-card,
   .achievement-item {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .interest-tags {
     justify-content: center;
+  }
+
+  .about-intro h2 {
+    font-size: 2rem;
+  }
+
+  .story-content p,
+  .about-intro p {
+    font-size: 1rem;
+    line-height: 1.7;
   }
 }
