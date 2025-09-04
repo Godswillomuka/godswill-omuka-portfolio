@@ -29,7 +29,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h2>Hello! I'm a passionate software engineer</h2>
+            <h2>Hello I'm</h2>
             <p>
               A passionate and results-oriented Fullstack Developer with a robust foundation in modern web
               technologies, acquired through an intensive 6-month Software Engineering program at Moringa
