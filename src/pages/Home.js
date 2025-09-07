@@ -11,7 +11,7 @@ import {
   ArrowDown,  
   Youtube 
 } from 'lucide-react';
-import { FaTiktok } from 'react-icons/fa'; // TikTok icon
+import { FaTiktok } from 'react-icons/fa'; 
 import '../styles/home.css';
 
 const Home = () => {
